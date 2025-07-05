@@ -19,8 +19,8 @@ dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION)
 sns = boto3.client('sns', region_name=AWS_REGION)
 
 # Define DynamoDB table names
-users_table = dynamodb.Table('MovieMagic_Users')
-booking_table = dynamodb.Table('MovieMagic_Bookings')
+users_table = dynamodb.Table('MovieMagic_Users1')
+booking_table = dynamodb.Table('MovieMagic_Bookings1')
 
 
 # Send email via SNS
