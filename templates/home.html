@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movies - MovieMagic</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
     <nav class="navbar">
@@ -16,7 +16,7 @@
                 <a href="{{ url_for('index') }}" class="nav-link">Home</a>
                 <a href="{{ url_for('home') }}" class="nav-link active">Movies</a>
                 <a href="{{ url_for('tickets') }}" class="nav-link">My Tickets</a>
-                <a href="{{ url_for('login') }}" class="nav-link">Logout</a>
+                <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
             </div>
             <div class="nav-user">
                 <span>Welcome, User! 👋</span>
@@ -29,83 +29,79 @@
             <section class="movies-section">
                 <h1>🎬 Now Playing</h1>
                 <div class="movies-grid">
+
                     <div class="movie-card">
                         <div class="movie-poster">
-                            <img src="../static/images/Hidden Love.png" alt="Hidden Love">
+                            <img src="{{ url_for('static', filename='images/Hidden Love.png') }}" alt="Hidden Love" />
                         </div>
                         <div class="movie-info">
                             <h3>Hidden Love</h3>
                             <div class="movie-rating">
                                 <div class="stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                                 </div>
                                 <span class="rating-value">9.2/10</span>
                             </div>
-                            <p class="movie-genre">Action, Love, Emotion, Dramatic</p>
-                            <p class="movie-duration">200 minutes</p>
-                            <p class="movie-description">Explores the theme of concealed love, specifically focusing on young women named Sang Zhi who develops a crush on her brother's friend, Duan Jiaxu, during her teenage years</p>
+                            <p class="movie-genre">Dramatic</p>
+                            <p class="movie-duration">3h 55m</p>
+                            <p class="movie-description">
+                                Explores the theme of concealed love, specifically focusing on young women named Sang Zhi who develops a crush on her brother's friend, Duan Jiaxu, during her teenage years
+                            </p>
                             <div class="movie-price">
                                 <span class="price">INR 150</span>
                             </div>
-                            <a href="booking_form.html?movie=1" class="btn btn-primary">Book Now</a>
+                            <a href="{{ url_for('booking_page') }}?movie=1" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
 
                     <div class="movie-card">
                         <div class="movie-poster">
-                            <img src="../static/images/Subham.jpg" alt="Subham">
+                            <img src="{{ url_for('static', filename='images/Subham.jpg') }}" alt="Subham" />
                         </div>
                         <div class="movie-info">
                             <h3>Subham</h3>
                             <div class="movie-rating">
                                 <div class="stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                                 </div>
-                                <span class="rating-value">9.0/10</span>
+                                <span class="rating-value">10/10</span>
                             </div>
-                            <p class="movie-genre">Horror Comedy</p>
-                            <p class="movie-duration">185 minutes</p>
-                            <p class="movie-description">A group of married men band together after their wives become transfixed by a cable TV soap opera serial.</p>
+                            <p class="movie-genre">Horror-Comedy</p>
+                            <p class="movie-duration">2h 40m</p>
+                            <p class="movie-description">
+                                A group of married men band together after their wives become transfixed by a cable TV soap opera serial.
+                            </p>
                             <div class="movie-price">
-                                <span class="price">INR 200</span>
+                                <span class="price">INR 250</span>
                             </div>
-                            <a href="booking_form.html?movie=2" class="btn btn-primary">Book Now</a>
+                            <a href="{{ url_for('booking_page') }}?movie=2" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
 
                     <div class="movie-card">
                         <div class="movie-poster">
-                            <img src="../static/images/Kubera.jpg" alt="Kubera">
+                            <img src="{{ url_for('static', filename='images/Kubera.jpg') }}" alt="Kubera" />
                         </div>
                         <div class="movie-info">
                             <h3>Kubera</h3>
                             <div class="movie-rating">
                                 <div class="stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
+                                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                                 </div>
                                 <span class="rating-value">10/10</span>
                             </div>
                             <p class="movie-genre">Social Thriller</p>
-                            <p class="movie-duration">188 minutes</p>
-                            <p class="movie-description">The story of a capitalist exploiting those who are below the poverty line. </p>
+                            <p class="movie-duration">2h 30m</p>
+                            <p class="movie-description">
+                                The story of a capitalist exploiting those who are below the poverty line.
+                            </p>
                             <div class="movie-price">
-                                <span class="price">INR 250</span>
+                                <span class="price">INR 200</span>
                             </div>
-                            <a href="booking_form.html?movie=3" class="btn btn-primary">Book Now</a>
+                            <a href="{{ url_for('booking_page') }}?movie=3" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>
